@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
     public void saveUser(String name, String lastName, byte age) {
         try {
             Statement statement = connection.createStatement();
-            String saveTheUserInTable = "INSERT INTO Users VALUES(" + 1 + ", '" + name + "'" + ", '" + lastName + "' " +
+            String saveTheUserInTable = "INSERT INTO users VALUES(" + 1 + ", '" + name + "'" + ", '" + lastName + "' " +
                     age + ")";
             statement.executeUpdate(saveTheUserInTable);
         } catch (SQLException e) {
